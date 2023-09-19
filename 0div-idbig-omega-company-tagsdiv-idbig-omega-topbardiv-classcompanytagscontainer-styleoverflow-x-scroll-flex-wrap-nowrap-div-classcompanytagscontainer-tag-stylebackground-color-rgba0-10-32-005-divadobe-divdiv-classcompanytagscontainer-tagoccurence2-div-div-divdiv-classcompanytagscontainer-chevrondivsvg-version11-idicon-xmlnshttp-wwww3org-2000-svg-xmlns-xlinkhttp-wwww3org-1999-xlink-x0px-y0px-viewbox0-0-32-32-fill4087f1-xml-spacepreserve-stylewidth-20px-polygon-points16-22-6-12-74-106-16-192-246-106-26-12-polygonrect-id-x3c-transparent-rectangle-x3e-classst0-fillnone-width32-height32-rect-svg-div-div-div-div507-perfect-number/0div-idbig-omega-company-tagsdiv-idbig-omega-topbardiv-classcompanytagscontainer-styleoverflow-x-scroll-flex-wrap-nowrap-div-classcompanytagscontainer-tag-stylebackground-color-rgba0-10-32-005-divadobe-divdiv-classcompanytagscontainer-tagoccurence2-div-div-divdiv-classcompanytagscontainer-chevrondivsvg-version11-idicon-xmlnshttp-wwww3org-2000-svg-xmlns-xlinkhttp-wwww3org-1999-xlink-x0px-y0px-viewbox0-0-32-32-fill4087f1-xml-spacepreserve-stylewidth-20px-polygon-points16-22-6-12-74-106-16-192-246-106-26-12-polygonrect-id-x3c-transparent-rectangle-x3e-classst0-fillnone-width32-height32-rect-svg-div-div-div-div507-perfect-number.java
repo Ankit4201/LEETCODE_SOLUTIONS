@@ -13,7 +13,7 @@ class Solution {
                       sum=sum+num/i;
               }
         }
-        if(sum==temp)
+        if(sum==num)
           return true;
         else
           return false;
