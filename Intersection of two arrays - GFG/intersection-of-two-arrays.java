@@ -56,29 +56,34 @@ class Solution {
 
         Arrays.sort(a);
         Arrays.sort(b);
-
-        int i = 0, j = 0;
-        int count = 0;
-
-        while (i < n && j < m) {
-            if (a[i] == b[j]) {
-                count++;
-                // To avoid counting duplicate elements, move both pointers until a different element is encountered.
-                int currentElement = a[i];
-                while (i < n && a[i] == currentElement) {
-                    i++;
-                }
-                while (j < m && b[j] == currentElement) {
-                    j++;
-                }
-            } else if (a[i] < b[j]) {
-                i++;
-            } else {
-                j++;
-            }
+        int i=0,j=0;
+        int count=0;
+        
+        while(i<n && j<m)
+        {
+           if(a[i]==b[j])
+           {
+               count++;
+               int currentElement=a[i];
+               while(i<n && a[i]==currentElement)
+               {
+                   i++;
+               }
+               while(j<m && b[j]==currentElement)
+               {
+                   j++;
+               }
+           }
+           else if(a[i]<b[j])
+           {
+               i++;
+           }
+           else
+           {
+               j++;
+           }
         }
 
         return count;
-  
     }
 };
