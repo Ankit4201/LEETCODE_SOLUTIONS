@@ -3,11 +3,10 @@ class Solution {
         
         Arrays.sort(nums);
         
-        int minProduct = nums[0] * nums[1];
-        int maxProduct = nums[nums.length-1] * nums[nums.length-2];
+        return(( nums[nums.length-1] * nums[nums.length-2])-(nums[0] * nums[1]));
+       
         
-        int difference = maxProduct-minProduct;
-        return difference;
+        
         
     }
 }
